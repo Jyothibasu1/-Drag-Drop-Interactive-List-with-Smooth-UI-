@@ -1,0 +1,72 @@
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Container styling */
+.con {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #3a1c71); /* Gradient for a modern look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Adds spacing between boxes */
+}
+
+/* Styling for the drag-and-drop containers */
+#left, #right {
+    width: 320px;
+    min-height: 450px;
+    padding: 15px;
+    border: 3px dashed #ffffff88; /* Light border for a stylish effect */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Highlight effect when dragging over */
+#left:hover, #right:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+}
+
+/* Individual list items */
+.list {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* Gradient background */
+    height: 70px;
+    margin: 20px;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect for list items */
+.list:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 72, 128, 0.5);
+}
+
+/* Image inside the list items */
+.list img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Active state when dragging */
+.list:active {
+    cursor: grabbing;
+    opacity: 0.7;
+}
